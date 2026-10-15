@@ -1,0 +1,121 @@
+/* Nome da Tag */
+p{
+    font-size: 16px;
+    color: #555;
+    font-family: Verdana, sans-serif;
+}
+
+/*.class*/
+.titulo{
+    font-family: Helvetica, sans-serif;
+    color: #f60;
+}
+/*ID #*/
+
+#destaque{
+    background: #333;
+    padding: 5px 10px;
+    color: #fff;
+    border: solid 2px #000;
+}
+
+/*taf junto com class*/
+
+h1.titulo{
+    text-decoration: underline;
+}
+
+/*Seletor irmão adjacente (primeiro irmão) (+)*/
+h1 + p{
+    color: #ff0000;
+}
+/*Seletor todos os elemntos irmãos (~)*/
+h2 ~ p{
+    border: solid 3px #333;
+}
+
+p a{
+    text-decoration: none;
+}
+
+/*Filho direto*/
+p > a{
+    background: #f60;
+    color: #fff;
+}
+
+.menu li{
+    list-style: none;
+    font-size: 18px;
+    display: inline-block;
+    padding: 5px;
+    border-left: solid 2px #333;
+    
+}
+
+.menu li:first-child{
+    border: none;
+}
+.menu li:last-child{
+    border: none;
+    background: #f60;
+    color: #fff;
+    border-radius: 10px;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+.lista li:nth-child(3){
+    color: blue;
+}
+/*Seleciona todos os elementos ímpares da lista*/
+.lista li:nth-child(odd){
+    background: #ddd;
+}
+
+.lista li:nth-child(even){
+    background: #333;
+    color: #ddd;
+}
+
+.lista li:nth-child(2n + 1){
+    background: #fffb00;
+}
+
+.titulo-destaque{
+    text-align: center;
+    font-size: 64px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.titulo-destaque::before{
+    content: "";
+    display: block;
+    width: 100px;
+    height: 5px;
+    background: #f60;
+    margin: auto;
+}
+
+.titulo-destaque::after{
+    content: "";
+    display: block;
+    width: 250px;
+    height: 3px;
+    background: #f60;
+    margin: auto;
+}
+
+.titulo + div p{
+    color: #ffffff;
+    margin-bottom: 80px;
+}
+
+
+
+/* Primeira letram do texto */
+.titulo + div p::first-line{
+    color: #f60;
+}

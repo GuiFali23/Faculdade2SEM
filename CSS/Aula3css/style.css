@@ -1,0 +1,176 @@
+body{
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+}
+
+#topo{
+    background: #f7f7f7;
+    height: 160px;
+    padding-top: 20px;
+}
+.simbolo{
+    width: 90px;
+    height: 90px;
+    background: #afc7ef;
+    border-radius: 200px;
+    margin: 0 auto;
+    border: solid 2px transparent;
+    /* Transições */
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    transition-delay: 2s;
+}
+.simbolo:hover{
+    background: #0073ff;
+    border: solid 2px #333;
+    border-radius: 0;
+}
+.menu{
+    text-align: center;
+    list-style: none;
+    padding: 10px 0;
+    margin-top: 40px;
+    background: #333;
+    
+
+}
+.menu li{
+    display: inline-block;
+}
+.menu a{
+    text-decoration: none;
+    color: #afc7ef;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+    transition: all 0.5s linear;
+    
+}
+
+.menu a:hover{
+    background: #0073ff;
+    border: solid 1px #afc7ef;
+    border-radius: 200px;
+}
+/* Submenu dropdown */
+.submenu{
+    position: relative;
+}
+.sub{
+    width: 160px;
+    background: #0073ff;
+    position: absolute;
+    padding: 10px 5px;
+    top: calc(100% + 5px);
+    text-align: left;
+    border-radius: 0 10px 10px 10px;
+    border: solid 1px #333;
+    opacity: 0;
+    height: 120px;
+    z-index: -1;
+    transition: all 0.5s linear; 
+}
+
+.sub li{
+    display: block;
+    border-bottom: dotted 1px #f7f7f7;
+    padding: 10px 0;
+}
+
+.sub li:last-child{
+    border: none;
+}
+
+.sub li a{
+    color: #fff;
+}
+
+.submenu:hover .sub{
+    display: block;
+    opacity: 1;
+    z-index: 9;
+    height: 160px;
+}
+
+
+/*#########################################################################################*/
+.conteudo h2{
+    text-align: center;
+}
+.car img{
+    vertical-align: middle;
+    transition: all 3s;
+}
+
+#acionar:checked + .carros img{
+    margin-left: 80%;
+}
+
+.carros .car:first-child img{
+    transition-timing-function: linear;
+}
+.carros .car:nth-child(2) img{
+    transition-timing-function: ease;
+}
+.carros .car:nth-child(3) img{
+    transition-timing-function: ease-in;
+}
+.carros .car:nth-child(4) img{
+    transition-timing-function: ease-out;
+}
+.carros .car:nth-child(5) img{
+    transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955)
+}
+
+.galeria{
+    margin: 100px 40px;
+}
+.foto{
+    width: 250px;
+    position: relative;
+    border: solid 2px #999;
+    overflow: hidden;
+}
+
+.foto:hover::before{
+    background: rgb(255, 255, 255, 0);
+    transition: all 0.5s ease;
+    backdrop-filter: blur(0);
+}
+
+.foto::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    position: absolute;
+    background: rgb(255, 255, 255, 0.75);
+    backdrop-filter: blur(3px);
+}
+
+.foto img{
+    width: 100%;
+    display: block;
+}
+
+.foto::after{
+    content: "Foto do inseto";
+    display: block;
+    width: 100%;
+    height: 50%;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+    position: absolute;
+    text-align: center;
+    bottom: 25px;
+    transition: all 0.5s ease 0.5s;
+    opacity: 0;
+}
+
+.foto:hover::after{
+    left: 0;
+    bottom: 0;
+    opacity: 1;
+}
